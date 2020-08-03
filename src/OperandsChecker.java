@@ -4,16 +4,16 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-public class OperandsChecker {
+class OperandsChecker {
     final int maxValue = 10;
     final Pattern pattern = Pattern.compile("^(1?\\d|[IVX]{1,4})([\\+\\-\\*\\/])(1?\\d|[IVX]{1,4})$");
     final static List AcceptableRomans = Arrays.asList("I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X");
 
-    public int operand1, operand2;
-    public String sign;
-    public boolean isRoman;
+    int operand1, operand2;
+    String sign;
+    boolean isRoman;
 
-    public boolean checkInput(String userInput){
+    boolean checkInput(String userInput){
         Matcher matcher = pattern.matcher(userInput);
         if (!matcher.find()) return false;
         if (userInput.matches(".*\\d.*") && (userInput.matches(".*[IVX].*"))) return false;

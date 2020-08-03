@@ -1,4 +1,4 @@
-public class CalculatorException extends Exception {
+class CalculatorException extends Exception {
     CalculatorException(String error){
         super(error);
     }

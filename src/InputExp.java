@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 
-public class InputExp {
+class InputExp {
     static Scanner systemInputScanner = new Scanner(System.in);
 
     static OperandsChecker getInputExpression () throws CalculatorException {
